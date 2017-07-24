@@ -10,7 +10,7 @@ app.get('/', function(req, res, next) {
             if (err) {
                 return next(err)
             }
-            var $ = cheerio.load(res.text);
+            var $ = cheerio.load(reponse.text);
             var items = [];
             $('#topic_list .topic_title').each(function (idx, element) {
                 var $element = $(element);
